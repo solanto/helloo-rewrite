@@ -1,0 +1,18 @@
+<header>
+    <link rel="stylesheet" href="css/header.css">
+    <nav>
+        <ul>
+            {% include header/home.html
+                url="https://google.com"
+                image="assets/earth.PNG"
+                label="Helloo World"
+            %}
+
+            {% include header/link.html url="https://google.com" label="Hackathon" %}
+            {% include header/link.html url="https://google.com" label="About" %}
+            {% include header/link.html url="https://google.com" label="Interact" %}
+            {% include header/link.html url="https://google.com" label="Learn" %}
+            {% include header/link.html url="https://google.com" label="Create" %}
+        </ul>
+    </nav>
+</header>
