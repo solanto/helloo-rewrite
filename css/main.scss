@@ -2,11 +2,8 @@
 # front matter for jekyll processing
 ---
 
-.main {
-    background-color: white;
-    height: 2000px;
-    width: fill;
-    color: black;
-    margin: 0 3em 0 3em;
+article.main {
+    margin: 0 10em;
     font-family: "Montserrat";
+    height: 200vh;
 }
