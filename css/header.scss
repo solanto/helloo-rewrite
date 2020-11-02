@@ -2,6 +2,19 @@
 # front matter for jekyll processing
 ---
 
+.main {
+    padding-top: 6em;
+    transition: padding-top 0.2s;
+}
+
+header {
+    &:hover {
+        + .main {
+            padding-top: 8em;
+        }
+    }
+}
+
 nav {
     width: 100vw;
     background-color: saturate(darken(#43e08d, 12), 5);
@@ -15,22 +28,36 @@ nav {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        height: 6em;
+        height: 4em;
         overflow-y: hidden;
-        
+        transition: height 0.2s;
+
+        &:hover {
+            height: 6em;
+
+            li {
+                font-size: 1.3em;
+
+                &:first-of-type {
+                    font-size: 1.4em;
+                }
+            }
+        }
+
         li {
             list-style-type: none;
             color: white;
             margin: 0;
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
-            font-size: 1.3em;
+            font-size: 1em;
             text-shadow: 0 0 0.4em darken(saturate(darken(#43e08d, 15), 5), 15);
-            
+            transition: font-size 0.2s;
+
             &:first-of-type {
                 font-weight: bold;
                 font-family: "Quicksand", sans-serif;
-                font-size: 1.4em;
+                font-size: 1.1em;
             }
             
             a {
@@ -46,8 +73,9 @@ nav {
                 }
                 
                 img {
-                    height: 2.8em;
+                    height: 2em;
                     margin-right: 0.5em;
+                    height: 2.8em;
                 }
             }
         }

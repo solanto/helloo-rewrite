@@ -1,10 +1,10 @@
 <header>
-    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href={{ "css/header.css" | relative_url }}>
     <nav>
         <ul>
             {% include header/home.html
-                url="https://google.com"
-                image="assets/earth.PNG"
+                url="/"
+                image="/assets/earth.png"
                 label="Helloo World"
             %}
 

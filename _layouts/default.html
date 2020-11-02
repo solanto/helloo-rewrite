@@ -1,9 +1,9 @@
 <head>
     {% include fonts.html %}
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href={{ "css/main.css" | relative_url }}>
 </head>
-{% include header.html %}
 <body>
+    {% include header.html %}
     <article class="main">
         {{ content }}
     </article>
