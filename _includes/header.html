@@ -2,11 +2,7 @@
     <link rel="stylesheet" href={{ "css/header.css" | relative_url }}>
     <nav>
         <ul>
-            {% include header/home.html
-                url="/"
-                image="/assets/earth.png"
-                label="Helloo World"
-            %}
+            {% include header/home.html url="/" image="/assets/earth.png" label="Helloo World"%}
 
             {% include header/link.html url="https://google.com" label="Hackathon" %}
             {% include header/link.html url="/test/" label="About" %}
