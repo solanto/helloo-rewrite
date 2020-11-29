@@ -2,8 +2,18 @@
 # front matter for jekyll processing
 ---
 
-article.main {
-    margin: 0 10em;
+@import "_sass/breakpoint-defs";
+
+body {
+    @media (orientation:portrait) and (min-width: $width-breakpoint) {
+        font-size: 1.8em;
+    }
+}
+
+article#main {
+    margin: 0 10vw;
     font-family: "Montserrat";
     height: 100vh;
+
+    
 }

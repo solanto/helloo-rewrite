@@ -2,26 +2,33 @@
 # front matter for jekyll processing
 ---
 
+$bg-color: saturate(darken(#52B8F7, 15), 2);
+$shadow-color: darken($bg-color, 12);
+$shadow-blur: 0.4em;
+
 footer {
-    background-color: saturate(darken(#52B8F7, 15), 2);
+    background-color: $bg-color;
     padding: 1em 0 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     font-family: "Quicksand";
+    text-shadow: 0 0 $shadow-blur $shadow-color;
 
     > * {
         margin: 0;
     }
 
-    ul.socials {
+    ul#socials {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         overflow: hidden;
         padding: 0;
+        box-shadow: none;
+        filter: drop-shadow(0px 0px $shadow-blur/2 $shadow-color);
        
         li {
             list-style-type: none;
@@ -57,8 +64,9 @@ footer {
     address {
         font-style: normal;
 
-        .e-mail {
+        #e-mail {
             margin: 0.5em 0;
+            cursor: pointer;
 
             &:before {
                 font-weight: normal;
@@ -72,7 +80,7 @@ footer {
     small {
         font-family: "Montserrat";
 
-        &.copyright {
+        &#copyright {
             &:before {
                 content: "© ";
                 font-family: "Quicksand";

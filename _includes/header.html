@@ -1,6 +1,8 @@
 <header>
     <link rel="stylesheet" href={{ "css/header.css" | relative_url }}>
     <nav>
+        <input id="menu-button" type="checkbox" name="Menu" />
+        <label for="menu-button"></label>
         <ul>
             {% include header/home.html url="/" image="/assets/earth.png" label="Helloo World"%}
 
@@ -12,4 +14,4 @@
         </ul>
     </nav>
 </header>
-<div class="header-space"></div>
+<div id="header-space"></div>

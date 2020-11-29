@@ -1,6 +1,6 @@
 <link rel="stylesheet" href={{ "css/footer.css" | relative_url }}>
 <footer>
-    <ul class="socials">
+    <ul id="socials">
         {% include footer/social.html
             url="https://instagram.com/hellooworldsite"
             image="instagram.png"
@@ -8,7 +8,7 @@
             handle="@hellooworldsite"
         %}
         {% include footer/social.html
-            url="https://www.youtube.com/channel/UCOtgUgvuIKYvEVnliwGNnHg"
+            url="https://youtube.com/channel/UCOtgUgvuIKYvEVnliwGNnHg"
             image="youtube.png"
             alt="Youtube"
             handle="Helloo World"
@@ -16,7 +16,8 @@
     </ul>
     <h1>#Hacktivist</h1>
     <address>
-        <h2 class="e-mail"></h2>
+        <!--our email link base64-encoded to avoid bots-->
+        <h2 id="e-mail" onclick="window.location.href=atob('bWFpbHRvOmhlbGxvb3dvcmxkc2l0ZUBnbWFpbC5jb20=')"></h2>
     </address>
-    <small class="copyright">2020 by Helloo World.</small>
+    <small id="copyright">2020 by Helloo World.</small>
 </footer>
