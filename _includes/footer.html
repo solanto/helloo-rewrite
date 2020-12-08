@@ -1,23 +1,23 @@
-<link rel="stylesheet" href={{ "css/footer.css" | relative_url }}>
+<link rel="stylesheet" href={{ "css/general/footer.css" | relative_url }}>
 <footer>
     <ul id="socials">
         {% include footer/social.html
-            url="https://instagram.com/hellooworldsite"
-            image="instagram.png"
-            alt="Instagram"
-            handle="@hellooworldsite"
+            url = "https://instagram.com/hellooworldsite"
+            image = "instagram.png"
+            alt = "Instagram"
+            handle = "@hellooworldsite"
         %}
         {% include footer/social.html
-            url="https://youtube.com/channel/UCOtgUgvuIKYvEVnliwGNnHg"
-            image="youtube.png"
-            alt="Youtube"
-            handle="Helloo World"
+            url = "https://youtube.com/channel/UCOtgUgvuIKYvEVnliwGNnHg"
+            image = "youtube.png"
+            alt = "YouTube"
+            handle = "Helloo World"
         %}
     </ul>
     <h1>#Hacktivist</h1>
     <address>
         <!--our email link base64-encoded to avoid bots-->
-        <h2 id="e-mail" onclick="window.location.href=atob('bWFpbHRvOmhlbGxvb3dvcmxkc2l0ZUBnbWFpbC5jb20=')"></h2>
+        <h2 id="e-mail" onclick="window.open(atob('bWFpbHRvOmhlbGxvb3dvcmxkc2l0ZUBnbWFpbC5jb20='), '_blank')"></h2>
     </address>
     <small id="copyright">2020 by Helloo World.</small>
 </footer>

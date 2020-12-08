@@ -1,0 +1,39 @@
+@mixin box($id, $color) {
+    ##{$id}, ##{$id} ~ * {
+        background-color: $color;
+    }
+}
+
+#main {
+    text-align: left;
+    margin-top: 0;
+    padding-bottom: 2rem;
+    color: white;
+
+    :not(li) {
+        padding: 2rem 6vw;
+        padding-top: 0;
+    }
+
+    ul, p, a {
+        margin: 0;
+    }
+
+    a {
+        color: white;
+        padding: 0;
+    }
+
+    h3 {
+        font-size: 2em;
+        font-family: "Quicksand";
+        margin-top: 1em;
+        margin-bottom: 0;
+        padding-top: 2rem;
+    }
+
+    h1, h2 {
+        color: black;
+        text-align: center;
+    }
+}

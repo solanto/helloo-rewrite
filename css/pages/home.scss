@@ -1,0 +1,130 @@
+---
+# front matter for jekyll processing
+---
+
+$bg-color: rgba(0,0,0,0.2);
+$bg-color-hover: rgba(0, 0, 0, 0.2);
+$shadow-color: rgba(0, 0, 0, 0.7);
+$shadow-blur: 0.4em;
+$nav-logo: url("/assets/earth-fill.png");
+@import "header";
+
+@keyframes typewriter {
+    0% { width: 0 }
+    100% { width: 50% }
+}
+
+nav {
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: none;
+
+    label::before {
+        text-shadow: 0 0 0.7em black;
+    }
+}
+
+.content {
+    font-size: 1.5em;
+
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+.scribbly {
+    position: relative;
+
+    .scribble {
+        position: absolute;
+    }
+}
+
+#title {
+    .content {
+        img {
+            height: 16vw;
+            width: 16vw;
+            margin-right: 2vw;
+            box-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            transition: transform 0.2s;
+            user-select: none;
+
+            &:hover {
+                transform: rotate(-10deg);
+            }
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
+
+            h1 {
+                font-family: "Quicksand";
+                width: 50%;
+                font-size: 8vw;
+                line-height: 8vw;
+                margin: 0;
+            }
+
+            h2 {
+                font-weight: 400;
+                font-size: 2.2vw;
+                margin-bottom: 0;
+                width: 0;
+                margin-top: 1vw;
+                animation: 1s steps(24) typewriter 2s both;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+#message {
+    background-color: tomato;
+
+    .content {
+        img {
+            width: 16vw;
+        }
+    }
+}
+
+#discover {
+    background-color: white;
+
+    #bubble {
+        width: 25vw;
+    }
+
+    #bubble-scribble {
+        width: 15vw;
+        top: 43%;
+        left: 60%;
+    }
+}
+
+#last {
+    z-index: -1;
+    margin-left: 30vw;
+    text-shadow: 0 0 1vw rgba(0, 0, 0, 0.4);
+
+    #what-we-do-scribble {
+        top: 0;
+        margin-top: -6.8em;
+        height: 20em;
+        z-index: -1;
+    }
+
+    .foreground {
+        margin-right: 6em;
+    }
+
+    #bg-box {
+        background-color: rgba(82, 115, 157, 0.8);
+        padding: 1em;
+        text-shadow: 0 0 0.6vw darken(rgba(82, 115, 157, 0.8), 60%);
+    }
+}

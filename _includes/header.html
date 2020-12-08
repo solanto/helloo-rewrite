@@ -1,5 +1,5 @@
 <header>
-    <link rel="stylesheet" href={{ "css/header.css" | relative_url }}>
+    <link rel="stylesheet" href={{ "css/general/header.css" | relative_url }}>
     <nav>
         <input id="menu-button" type="checkbox" name="Menu" />
         <label for="menu-button"></label>
@@ -7,11 +7,10 @@
             {% include header/home.html url="/" image="/assets/earth.png" label="Helloo World"%}
 
             {% include header/link.html url="https://google.com" label="Hackathon" %}
-            {% include header/link.html url="/test/" label="About" %}
-            {% include header/link.html url="https://google.com" label="Interact" %}
-            {% include header/link.html url="https://google.com" label="Learn" %}
-            {% include header/link.html url="https://google.com" label="Create" %}
+            {% include header/link.html url="/about/" label="About" %}
+            {% include header/link.html url="/interact/" label="Interact" %}
+            {% include header/link.html url="/learn/" label="Learn" %}
+            {% include header/link.html url="/create/" label="Create" %}
         </ul>
     </nav>
 </header>
-<div id="header-space"></div>

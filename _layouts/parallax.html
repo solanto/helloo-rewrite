@@ -1,0 +1,14 @@
+<head>
+    {% include favicon.html %}
+    {% include fonts.html %}
+    <link rel="stylesheet" href={{ "css/general/parallax.css" | relative_url }}>
+    <title>{{ page.title }}</title>
+</head>
+<body>
+    <article id="main">
+        <div class="parallax">
+            {% include header.html %}
+            {{ content }}
+        </div> 
+    </article>
+</body>

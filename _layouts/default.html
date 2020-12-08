@@ -1,9 +1,12 @@
 <head>
+    {% include favicon.html %}
     {% include fonts.html %}
-    <link rel="stylesheet" href={{ "css/main.css" | relative_url }}>
+    <link rel="stylesheet" href={{ "css/general/main.css" | relative_url }}>
+    <title>{{ page.title }}</title>
 </head>
 <body>
     {% include header.html %}
+    <div id="header-space"></div>
     <article id="main">
         {{ content }}
     </article>

@@ -1,0 +1,11 @@
+---
+# front matter for jekyll processing
+---
+
+@import "boxes";
+
+@include box(websites, goldenrod);
+@include box(apps, mediumseagreen);
+@include box(workspaces, darkturquoise);
+@include box(courses, deepskyblue);
+@include box(camps-and-communities, rebeccapurple);
