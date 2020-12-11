@@ -2,7 +2,7 @@
 # front matter for jekyll processing
 ---
 
-@import "_sass/breakpoint-defs";
+@import "breakpoint-defs";
 
 body {
     @media (orientation:portrait) and (min-width: $width-breakpoint) {

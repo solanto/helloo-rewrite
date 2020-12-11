@@ -1,0 +1,33 @@
+---
+# front matter for jekyll processing
+---
+
+.crt-post {
+    border-radius: 0.5em;
+
+    .crt-post-footer .crt-post-share {
+        margin-top: -0.9em
+    }
+}
+
+.crt-load-more {
+    border-radius: 30px;
+    transition: 0.2s;
+    font-family: "Quicksand";
+    text-transform: lowercase;
+    font-style: italic;
+    font-weight: 600;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+        content: "!";
+    }
+}
+
+.crt-widget.crt-widget-branded .crt-logo {
+    font-family: "Quicksand";
+    visibility: visible;
+}

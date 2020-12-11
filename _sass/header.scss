@@ -8,7 +8,7 @@ $transition-time: 0.2s;
 $menu-button-margin: 1.5em;
 
 #header-space {
-    height: 6em;
+    height: 8em;
 }
 
 nav {
@@ -16,7 +16,7 @@ nav {
     background-color: $bg-color;
     position: fixed;
     margin: 0;
-    z-index: 1;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: flex-start;

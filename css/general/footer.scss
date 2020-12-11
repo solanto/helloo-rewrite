@@ -71,12 +71,12 @@ footer {
             margin: 0.5em 0;
             cursor: pointer;
             font-size: 1.2rem;
+            font-weight: normal;
+            font-family: "Montserrat";
 
-            &:before {
-                font-weight: normal;
-                font-family: "Montserrat";
-                // our email unicode-escaped to avoid bots
-                content: "\0068\0065\006c\006c\006f\006f\0077\006f\0072\006c\0064\0073\0069\0074\0065\0040\0067\006d\0061\0069\006c\002e\0063\006f\006d"
+            &:after {
+                // our email cut up to avoid bots; beginning in html
+                content: "@gmail.com";
             }
         }
     }
