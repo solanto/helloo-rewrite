@@ -12,7 +12,7 @@
 
 .crt-load-more {
     border-radius: 30px;
-    transition: 0.2s;
+    transition: background-color 0.2s;
     font-family: "Quicksand";
     text-transform: lowercase;
     font-style: italic;
@@ -36,5 +36,18 @@
 .galcolumn {
     @media (orientation: portrait) {
         width: 100% !important;
+    }
+}
+
+.crt-popup-wrapper .crt-popup .crt-popup-right {
+    font-family: "Montserrat";
+    font-weight: 500 !important;
+}
+
+.crt-popup-wrapper .crt-popup .crt-popup-read-more a.crt-button {
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.13);
     }
 }
