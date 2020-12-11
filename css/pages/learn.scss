@@ -39,15 +39,21 @@
     }
 }
 
-.crt-popup-wrapper .crt-popup .crt-popup-right {
-    font-family: "Montserrat";
-    font-weight: 500 !important;
-}
+.crt-popup-wrapper .crt-popup {
+    .crt-popup-right {
+        font-family: "Montserrat";
+        font-weight: 500 !important;
+    }
 
-.crt-popup-wrapper .crt-popup .crt-popup-read-more a.crt-button {
-    transition: background-color 0.2s;
+    .crt-popup-read-more a.crt-button {
+        transition: background-color 0.2s;
+    
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.13);
+        }
+    }
 
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.13);
+    .crt-popup-footer .crt-popup-stats {
+        visibility: hidden;
     }
 }
