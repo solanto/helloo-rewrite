@@ -32,3 +32,9 @@
     font-family: "Quicksand";
     visibility: visible;
 }
+
+.galcolumn {
+    @media (orientation: portrait) {
+        width: 100% !important;
+    }
+}
