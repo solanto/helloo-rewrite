@@ -1,6 +1,6 @@
 <li>
     <a href="{{ include.url }}">
-        <img src="{{ include.image | prepend: '/assets/socials/' }}" alt="{{ include.alt }}" draggable=false>
+        <img src="{{ 'assets/socials' | relative_url }}/{{ include.image }}" alt="{{ include.alt }}" draggable=false>
         <p>{{ include.handle }}</p>
     </a>
 </li>

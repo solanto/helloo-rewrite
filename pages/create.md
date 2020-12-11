@@ -1,5 +1,5 @@
 ---
-permalink: /create/
+permalink: create
 title: Create - Helloo World
 layout: create
 ---

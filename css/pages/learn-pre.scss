@@ -3,5 +3,5 @@
 ---
 
 .crt-logo {
-    visibility: hidden;
+    visibility: hidden; // prevent "powered by curator.io" link from showing up before content is loaded
 }

@@ -15,7 +15,7 @@ collections:
 # Handling Reading
 safe                : false
 include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "hellootest1.gemspec", ".jekyll-metadata", "README.md", "LICENSE.txt", ".gitignore"]
 keep_files          : [".git", ".svn"]
 encoding            : "utf-8"
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
@@ -42,7 +42,7 @@ incremental         : false
 detach              : false
 port                : 4000
 host                : 127.0.0.1
-baseurl             : "" # does not include hostname
+baseurl             : "/helloo-rewrite" # does not include hostname
 show_dir_listing    : false
 
 # Outputting

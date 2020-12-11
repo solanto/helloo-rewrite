@@ -6,7 +6,7 @@ $bg-color: rgba(0,0,0,0.2);
 $bg-color-hover: rgba(0, 0, 0, 0.2);
 $shadow-color: rgba(0, 0, 0, 0.7);
 $shadow-blur: 0.4em;
-$nav-logo: url("/assets/earth-fill.png");
+$nav-logo: url({{ "/assets/earth-fill.png" | relative_url }});
 @import "header";
 
 @keyframes typewriter {

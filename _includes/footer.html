@@ -1,4 +1,4 @@
-<link rel="stylesheet" href={{ "css/general/footer.css" | relative_url }}>
+<link rel="stylesheet" href="{{ site.baseurl }}/css/general/footer.css">
 <footer>
     <ul id="socials">
         {% include footer/social.html
@@ -16,7 +16,7 @@
     </ul>
     <h1>#Hacktivist</h1>
     <address>
-        <!--our email link base64-encoded and cut up to avoid bots; rest in css-->
+        <!--our email link base64-encoded and cut up to avoid bots; rest of label in css-->
         <h2 id="e-mail" onclick="window.open(atob('bWFpbHRvOmhlbGxvb3dvcmxkc2l0ZUBnbWFpbC5jb20='), '_blank')">hellooworldsite</h2>
     </address>
     <small id="copyright">2020 by Helloo World.</small>

@@ -6,5 +6,5 @@ $bg-color: saturate(darken(#43e08d, 12), 5);
 $bg-color-hover: darken(desaturate($bg-color, 15), 8);
 $shadow-color: darken($bg-color, 15);
 $shadow-blur: 0.4em;
-$nav-logo: url("/assets/earth.png");
+$nav-logo: url({{ "assets/earth.png" | relative_url }});
 @import "header";
