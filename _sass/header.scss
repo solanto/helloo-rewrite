@@ -180,7 +180,7 @@ nav {
                 @media (orientation: landscape) {
                     padding: 50% 1.2vw;
 
-                    &:hover, &:active {
+                    &:hover {
                         background-color: $bg-color-hover;
                     }
                 }
