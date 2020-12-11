@@ -8,6 +8,10 @@
     .crt-post-footer .crt-post-share {
         margin-top: -0.9em
     }
+
+    &.crt-post-youtube .crt-play-icon, .crt-grid-post.crt-post-youtube .crt-play-icon {
+        visibility: hidden;
+    }
 }
 
 .crt-load-more {
