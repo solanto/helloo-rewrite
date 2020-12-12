@@ -40,6 +40,10 @@
             h2 {
                 font-weight: normal;
                 font-size: 1.2em;
+
+                @media (orientation: portrait) {
+                    font-weight: 500;
+                }
             }
         }
 

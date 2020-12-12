@@ -9,6 +9,7 @@ body {
 
     @media (orientation:portrait) and (min-width: $width-breakpoint) {
         font-size: 1.8em;
+        font-weight: 500;
     }
 }
 
@@ -67,6 +68,11 @@ article#main {
             min-height: 100vh;
             position: relative;
 
+            @media (orientation: portrait) {
+                flex-direction: column;
+                justify-content: center;
+            }
+
             .content {
                 height: min-content;
                 position: relative;
@@ -79,6 +85,10 @@ article#main {
                 &.media-left, &.media-right {
                     display: flex;
                     align-items: center;
+                    
+                    @media (orientation: portrait) {
+                        flex-direction: column;
+                    }
                 }
 
                 $media-margin: 3em;
@@ -98,14 +108,28 @@ article#main {
                         width: 100%;
                     }
                 }
+
+                @media (orientation: portrait) {
+                    justify-content: center;
+                    height: auto;
+
+                    &.media-right, &.media-left {
+                        .media {
+                            margin-left: 0;
+                            margin-right: 0;
+                        }
+                    }
+                }
             }
 
-            &.right {
-                margin-left: 5vw;
-            }
-
-            &.left {
-                margin-right: 5vw;
+            @media (orientation: landscape) {
+                &.right {
+                    margin-left: 5vw;
+                }
+        
+                &.left {
+                    margin-right: 5vw;
+                }
             }
         }
     }

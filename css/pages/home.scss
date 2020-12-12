@@ -9,10 +9,7 @@ $shadow-blur: 0.4em;
 $nav-logo: url({{ "/assets/earth-fill.png" | relative_url }});
 @import "header";
 
-@keyframes typewriter {
-    0% { width: 0 }
-    100% { width: 50% }
-}
+@keyframes typewriter { 0% { width: 0 } 100% { width: 50% } }
 
 nav {
     background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
@@ -20,6 +17,12 @@ nav {
 
     label::before {
         text-shadow: 0 0 0.7em black;
+    }
+
+    @media (orientation: portrait) {
+        ul li:first-child {
+            opacity: 0;
+        }
     }
 }
 
@@ -53,6 +56,16 @@ nav {
             &:hover {
                 transform: rotate(-10deg);
             }
+
+            @media (orientation: portrait) {
+                height: 18vh;
+                width: 18vh;
+                margin: 0 0 5vh 0;
+
+                &:hover {
+                    transform: none;
+                }
+            }
         }
 
         div {
@@ -60,12 +73,24 @@ nav {
             flex-direction: column;
             text-shadow: 0 0 1vw rgba(0, 0, 0, 0.3);
 
+            @media (orientation: portrait) {
+                align-items: center;
+                width: 80%;
+                text-align: center;
+            }
+
             h1 {
                 font-family: "Quicksand";
                 width: 50%;
                 font-size: 8vw;
                 line-height: 8vw;
                 margin: 0;
+
+                @media (orientation: portrait) {
+                    width: auto;
+                    font-size: 18vw;
+                    line-height: 18vw;
+                }
             }
 
             h2 {
@@ -77,6 +102,13 @@ nav {
                 animation: 1s steps(24) typewriter 2s both;
                 overflow: hidden;
                 white-space: nowrap;
+
+                @media (orientation: portrait) {
+                    font-size: revert;
+                    animation: none;
+                    width: auto;
+                    white-space: normal;
+                }
             }
         }
     }
@@ -88,6 +120,11 @@ nav {
     .content {
         img {
             width: 16vw;
+
+            @media (orientation: portrait) {
+                width: auto;
+                height: 25vh;
+            }
         }
     }
 }
@@ -97,18 +134,27 @@ nav {
 
     #bubble {
         width: 25vw;
+
+        @media (orientation: portrait) {
+            width: auto;
+            height: 18vh;
+        }
     }
 
     #bubble-scribble {
         width: 15vw;
         top: 43%;
         left: 60%;
+
+        @media (orientation: portrait) {
+            width: auto;
+            height: 18vh;
+        }
     }
 }
 
 #last {
     z-index: -1;
-    margin-left: 30vw;
     text-shadow: 0 0 1vw rgba(0, 0, 0, 0.4);
 
     #what-we-do-scribble {
@@ -116,10 +162,6 @@ nav {
         margin-top: -6.8em;
         height: 20em;
         z-index: -1;
-    }
-
-    .foreground {
-        margin-right: 6em;
     }
 
     #bg-box {
