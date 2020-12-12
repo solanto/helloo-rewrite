@@ -20,6 +20,8 @@ nav {
     }
 
     @media (orientation: portrait) {
+        background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 90%);
+
         ul li:first-child {
             opacity: 0;
         }

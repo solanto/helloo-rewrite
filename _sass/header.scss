@@ -33,14 +33,23 @@ nav {
 
         @media (orientation: portrait) {
             visibility: visible;
+            
+
 
             @media (min-width: $width-breakpoint) {
                 margin: 7em 2em 0 0;
             }
         }
 
-        &:checked ~ ul {
-            max-height: 100vh;
+        &:checked {
+            ~ ul {
+                max-height: 100vh;
+
+                @media (orientation: portrait) {
+                    background-color: #1BCB6E;
+                    margin-top: -8.5vh;
+                }
+            }
         }
     }
 
@@ -54,22 +63,23 @@ nav {
             visibility: visible;
 
             @media (min-width: $width-breakpoint) {
-                margin-top: 1.3em;
+                margin-top: 1em;
                 margin-right: -1em;
             }
         }
 
         &:before {
             content: "≡";
-            font-family: "Quicksand";
-            font-weight: 800;
+            font-family: "Montserrat";
+            font-weight: bold;
             font-size: 2em;
             cursor: pointer;
             color: white;
-            text-shadow: 0 0 0.7em $shadow-color;
+            text-shadow: 0 0 0.6em $shadow-color;
 
             @media (orientation: portrait) and (min-width: $width-breakpoint) {
-                font-size: 3em;
+                font-size: 4.2em;
+                margin-left: -2.7em;
             }
         }
     }
@@ -108,7 +118,8 @@ nav {
             height: auto;
             justify-content: flex-start;
             max-height: 4em;
-            transition: max-height 0.3s;
+            transition: 0.2s;
+            width: 100vw;
 
             @media (min-width: $width-breakpoint) {
                 font-size: 1.6em;
