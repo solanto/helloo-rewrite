@@ -2,16 +2,10 @@
 # front matter for jekyll processing
 ---
 
-$bg-color: rgba(0,0,0,0.2);
-$bg-color-hover: rgba(0, 0, 0, 0.2);
-$shadow-color: rgba(0, 0, 0, 0.7);
-$shadow-blur: 0.4em;
-$nav-logo: url({{ "/assets/earth-fill.png" | relative_url }});
-@import "header";
-
 @keyframes typewriter { 0% { width: 0 } 100% { width: 50% } }
 
 nav {
+    background-color: rgba(0,0,0,0.2);
     background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%);
     box-shadow: none;
 
@@ -24,6 +18,27 @@ nav {
 
         ul li:first-child {
             visibility: hidden;
+        }
+    }
+
+    ul {
+        li {
+            @media (orientation: landscape) {
+                text-shadow: 0 0 0.4em rgba(0, 0, 0, 0.7);
+            }
+
+            a {
+                .nav-image#nav-logo {
+                    background-image: url({{ "assets/earth-fill.png" | relative_url }});
+                    filter: drop-shadow(0 0 0.2em rgba(0, 0, 0, 0.7));
+                }
+
+                &:hover {
+                    @media (orientation: landscape) {
+                        background-color: rgba(0, 0, 0, 0.2);
+                    }
+                }
+            }
         }
     }
 }

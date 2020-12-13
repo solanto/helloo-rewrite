@@ -2,9 +2,232 @@
 # front matter for jekyll processing
 ---
 
+@keyframes ul-small { from, 80% { height: 6em } to { height: 4em } }
+@keyframes li-small { from, 80% { font-size: 1.3em } to { font-size: 1em } }
+@keyframes home-small { from, 80% { font-size: 1.4em } to { font-size: 1.1em } }
+
+@import "breakpoint-defs";
+
+$transition-time: 0.2s;
+$menu-button-margin: 1.5em;
+$shadow-blur: 0.4em;
 $bg-color: saturate(darken(#43e08d, 12), 5);
 $bg-color-hover: darken(desaturate($bg-color, 15), 8);
 $shadow-color: darken($bg-color, 15);
 $shadow-blur: 0.4em;
-$nav-logo: url({{ "assets/earth.png" | relative_url }});
-@import "header";
+
+#header-space {
+    height: 8em;
+}
+
+nav {
+    width: 100vw;
+    background-color: $bg-color;
+    position: fixed;
+    margin: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 0 0.8rem change-color(darken($shadow-color, 10%), $alpha: 0.3);
+
+    #menu-button {
+        pointer-events: all;
+        margin: 2em 2em 0 0;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        pointer-events: none;
+        visibility: hidden;
+
+        @media (orientation: portrait) {
+            visibility: visible;
+
+            @media (min-width: $width-breakpoint) {
+                margin: 7em 2em 0 0;
+            }
+        }
+
+        &:checked {
+            ~ ul {
+                max-height: 100vh;
+
+                @media (orientation: portrait) {
+                    background-color: #1BCB6E;
+                    margin-top: -4.4em;
+                }
+            }
+        }
+    }
+
+    label {
+        line-height: 4em;
+        position: absolute;
+        margin-left: 85vw;
+        left: 0;
+        visibility: hidden;
+
+        @media (orientation: portrait) {
+            visibility: visible;
+
+            @media (min-width: $width-breakpoint) {
+                margin-top: 1em;
+                margin-right: -1em;
+            }
+        }
+
+        &:before {
+            content: "≡";
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-size: 2em;
+            cursor: pointer;
+            color: white;
+            text-shadow: 0 0 0.6em $shadow-color;
+
+            @media (orientation: portrait) and (min-width: $width-breakpoint) {
+                font-size: 4.2em;
+                // margin-left: -2.7em;
+            }
+        }
+    }
+    
+    ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow-y: hidden;
+        height: 4em;
+        overflow-x: hidden;
+
+        @media (orientation: landscape) and (min-width: $width-breakpoint) {
+            animation: ul-small $transition-time*5;
+            transition: height $transition-time;
+
+            &:hover, &:active {
+                height: 6em;
+    
+                li {
+                    font-size: 1.3em;
+    
+                    &:first-of-type {
+                        font-size: 1.4em;
+                    }
+                }
+            }
+        }
+
+        @media (orientation: portrait) {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            justify-content: flex-start;
+            max-height: 4em;
+            transition: 0.3s;
+            width: 100vw;
+
+            @media (min-width: $width-breakpoint) {
+                font-size: 1.6em;
+            }
+        }
+
+        li {
+            list-style-type: none;
+            color: white;
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1em;
+            text-shadow: 0 0 $shadow-blur $shadow-color;
+            transition: font-size $transition-time;
+
+            @media (orientation: landscape) and (min-width: $width-breakpoint) {
+                animation: li-small $transition-time*5;
+            }
+
+            @media (orientation: portrait) {
+                padding: 0.4em 0;
+            }
+
+            &:hover, &:active {
+                @media (orientation: landscape) {
+                    a {
+                        .nav-image {
+                            transform: rotate(-10deg);
+                        }
+                    }
+                }
+            }
+
+            &:first-of-type {
+                font-weight: bold;
+                font-family: "Quicksand", sans-serif;
+                font-size: 1.1em;
+                visibility: visible;
+                width: auto;
+
+                #menu-button, #menu-left-pad {
+                    visibility: hidden;
+                    width: 0;
+                    margin: 0;
+                }
+                
+                @media (orientation: landscape) and (min-width: $width-breakpoint) {
+                    animation: home-small $transition-time*5;
+                }
+
+                a {
+                    p {
+                        flex-shrink: 0;
+                    }
+                }
+
+                @media (orientation: portrait) {
+                    margin-bottom: 0;
+                }
+            }
+            
+            a {
+                padding: 0 1.2vw;
+                text-decoration: none;
+                color: inherit;
+                display: flex;
+                align-items: center;
+                transition: background-color $transition-time;
+                
+                @media (orientation: landscape) {
+                    padding: 50% 1.2vw;
+
+                    &:hover {
+                        background-color: $bg-color-hover;
+                    }
+                }
+                
+                .nav-image {
+                    margin-right: 0.5em;
+                    height: 2.8em;
+                    transition: transform $transition-time;
+                    background-size: contain;
+                    width: 2.8em;
+                    background-repeat: no-repeat;
+
+                    @media (orientation: portrait) and (min-width: $width-breakpoint) {
+                        height: 2.3em;
+                    }
+
+                    &#nav-logo {
+                        background-image: url({{ "assets/earth.png" | relative_url }});
+                        filter: drop-shadow(0 0 $shadow-blur/2 $shadow-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    margin: 0;
+}
