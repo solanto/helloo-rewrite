@@ -4,13 +4,17 @@
         <input id="menu-button" type="checkbox" name="Menu" />
         <label for="menu-button"></label>
         <ul>
-            {% include header/home.html image="/assets/earth.png" label="Helloo World"%}
-
-            {% include header/link.html url="hackathon" label="Hackathon" %}
-            {% include header/link.html url="about" label="About" %}
-            {% include header/link.html url="interact" label="Interact" %}
-            {% include header/link.html url="learn" label="Learn" %}
-            {% include header/link.html url="create" label="Create" %}
+            <li>
+                <a href="{{ site.baseurl }}/">
+                    <div class="nav-image" id="nav-logo"></div>
+                    <p>Helloo World</p>
+                </a>
+            </li>
+            {% for page in site.pages %}
+                <li>
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+            {% endfor %}
         </ul>
     </nav>
 </header>

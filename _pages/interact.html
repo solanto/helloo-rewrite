@@ -1,0 +1,27 @@
+---
+permalink: interact
+title: Interact
+layout: interact
+---
+
+{% for activity in site.interact %}
+    {% unless activity.coming-soon %}
+        <a class="entry" href="{{ activity.url }}">
+            <img src="{{ activity.thumbnail }}" />
+            <h1>{{ activity.title }}</h1>
+            <h2>{{ activity.description }}</h2>
+        </a>
+    {% endunless %}
+{% endfor %}
+
+<h1 id="coming-soon-header">Coming Soon</h1>
+
+{% for activity in site.interact %}
+    {% if activity.coming-soon %}
+        <div class="entry">
+            <img src="{{ activity.thumbnail }}" />
+            <h1>{{ activity.title }}</h1>
+            <h2>{{ activity.description }}</h2>
+        </div>
+    {% endif %}
+{% endfor %}

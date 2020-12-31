@@ -1,6 +1,6 @@
 ---
 permalink: create
-title: Create - Helloo World
+title: Create
 layout: create
 ---
 

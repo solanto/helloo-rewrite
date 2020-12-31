@@ -11,6 +11,10 @@ sass:
 collections:
   posts:
     output          : true
+  pages:
+    output          : true
+  interact:
+    output          : true
 
 # Handling Reading
 safe                : false
@@ -46,7 +50,7 @@ baseurl             : "/helloo-rewrite" # does not include hostname
 show_dir_listing    : false
 
 # Outputting
-permalink           : date
+permalink           : title
 paginate_path       : /page:num
 timezone            : 'America/Los_Angeles'
 
