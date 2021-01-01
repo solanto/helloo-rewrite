@@ -9,14 +9,15 @@
 
     &:hover {
         transform: scale(1.02);
-        box-shadow: 0 0 1em rgba(0,0,0,0.1);
+        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     }
 
     .crt-post-footer .crt-post-share {
         margin-top: -0.9em;
     }
 
-    &.crt-post-youtube .crt-play-icon, .crt-grid-post.crt-post-youtube .crt-play-icon {
+    &.crt-post-youtube .crt-play-icon,
+    .crt-grid-post.crt-post-youtube .crt-play-icon {
         visibility: hidden;
     }
 }
@@ -61,7 +62,7 @@
 
     .crt-popup-read-more a.crt-button {
         transition: background-color 0.2s;
-    
+
         &:hover {
             background-color: rgba(0, 0, 0, 0.13);
         }
@@ -74,4 +75,125 @@
 
 .crt-notice.crt-notice-error span::after {
     content: " or reload the page to try again 😰";
+}
+
+@media (orientation: portrait) and (min-width: 910px) {
+    .crt-post-c {
+        font-size: 1.2em;
+
+        .crt-post-footer {
+            height: 1.8em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .crt-post-date {
+                margin-left: 0.5em;
+            }
+
+            .crt-post-share {
+                padding-top: 0.3em;
+            }
+        }
+
+        .crt-post-header .crt-social-icon i {
+            font-size: 1.4em;
+        }
+    }
+
+    .crt-popup-wrapper {
+        .crt-popup-container {
+            padding: 40px;
+            pointer-events: all !important;
+        }
+
+        .crt-popup {
+            transform: scale(1.4);
+
+            .crt-previous, .crt-next {
+                right: -41px;
+                width: 40px;
+            }
+
+            .crt-previous {
+                left: -41px;
+            }
+
+            .crt-popup-right {
+                position: relative;
+                width: auto;
+                max-width: 600px;
+                right: auto;
+                height: auto;
+                padding-bottom: 40px;
+                font-size: 1em;
+                line-height: 1.3em;
+
+                .crt-popup-text {
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    right: auto;
+                    bottom: auto;
+                    max-height: 300px;
+                    padding-bottom: 15px;
+                }
+            }
+
+            .crt-popup-left {
+                padding-right: 0;
+                width: auto !important;
+
+                .crt-pagination {
+                    right: 0;
+                }
+            }
+
+            &.has-image {
+                .crt-popup-right {
+                    position: relative;
+                    width: auto;
+                    max-width: 600px;
+                    right: auto;
+                    height: auto;
+
+                    .crt-popup-text {
+                        position: relative;
+                        top: auto;
+                        left: auto;
+                        right: auto;
+                        bottom: auto;
+                        max-height: 300px;
+                    }
+                }
+            }
+
+            &.crt-has-read-more {
+                &.has-image {
+                    .crt-popup-right {
+                        .crt-popup-text {
+                            bottom: auto;
+                        }
+                    }
+                }
+            }
+
+            .crt-popup-read-more {
+                margin-bottom: 2%;
+                z-index: 10;
+
+                a {
+                    padding: 3%;
+                    z-index: 10;
+                }
+            }
+        }
+    }
+
+    .crt-load-more {
+        font-size: 1.2em;
+        border-radius: 2.4em;
+        padding: 1.2em !important;
+        margin: 1.2em;
+    }
 }
