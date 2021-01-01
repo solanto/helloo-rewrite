@@ -18,6 +18,10 @@ footer {
     text-shadow: 0 0 $shadow-blur $shadow-color;
     margin-top: 3em;
 
+    @media (orientation: portrait) {
+        font-size: 1.2em;
+    }
+
     > * {
         margin: 0;
     }
@@ -47,8 +51,10 @@ footer {
                 margin: 0.75em;
                 transition: 0.5s;
 
-                &:hover {
-                    max-width: 13em;
+                @media (orientation: landscape) {
+                    &:hover {
+                        max-width: 13em;
+                    }
                 }
             
                 img {
@@ -73,6 +79,11 @@ footer {
             font-size: 1.2rem;
             font-weight: normal;
             font-family: "Montserrat";
+
+            @media (orientation: portrait) {
+                font-size: 2.2rem;
+                font-weight: bold;
+            }
 
             &:after {
                 // our email cut up to avoid bots; beginning in html
