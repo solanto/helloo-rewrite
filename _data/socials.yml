@@ -1,7 +1,7 @@
 - alt: Instagram
   link: https://instagram.com/hellooworldsite
-  icon: instagram.png
-  handle: "@hellooworldsite"
+  icon: instagram.png # in /assets/socials/
+  handle: "@hellooworldsite" # "@" confuses jekyll, so use quotes
 
 - alt: YouTube
   link: https://youtube.com/channel/UCOtgUgvuIKYvEVnliwGNnHg
