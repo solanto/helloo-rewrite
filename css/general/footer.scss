@@ -19,7 +19,7 @@ footer {
     margin-top: 3em;
 
     @media (orientation: portrait) {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     > * {
@@ -76,12 +76,11 @@ footer {
         #e-mail {
             margin: 0.5em 0;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1em;
             font-weight: normal;
             font-family: "Montserrat";
 
             @media (orientation: portrait) {
-                font-size: 2.2rem;
                 font-weight: bold;
             }
 
